@@ -8,7 +8,7 @@ git clone https://github.com/HichemTab-tech/default-npm-project
 
 ## usage:
 
-replace the following in your the whole project:
+replace the following in your whole project:
 
 - [ ] `GITHUB_REPO_NAME` with your project name like `OTP-designer-jquery`;
 - [ ] `LIBRARY_MAIN_SCRIPT_NAME` with your main script name like `otpdesigner.js`;
