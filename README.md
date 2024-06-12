@@ -391,8 +391,8 @@ Demo example:
 Contributions are always welcome!
 
 If you have any ideas, improvements, or bug fixes,
-please [open an issue](https://github.com/ChoozeDisplay-js/issues)
-or [submit a pull request](https://github.com/ChoozeDisplay-js/pulls).
+please [open an issue](https://github.com/HichemTab-tech/ChoozeDisplay-js/issues)
+or [submit a pull request](https://github.com/HichemTab-tech/ChoozeDisplay-js/pulls).
 
 ## Author
 
@@ -400,4 +400,4 @@ or [submit a pull request](https://github.com/ChoozeDisplay-js/pulls).
 
 ## License
 
-[MIT](https://github.com/ChoozeDisplay-js/blob/master/LICENSE)
+[MIT](https://github.com/HichemTab-tech/ChoozeDisplay-js/blob/master/LICENSE)
