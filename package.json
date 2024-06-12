@@ -1,31 +1,49 @@
 {
-  "name": "PACKAGE_NAME",
+  "name": "choozedisplay-js",
   "version": "1.0.0",
-  "description": "",
+  "description": "A jQuery plugin for dynamically displaying content based on user selections from checkboxes, radio buttons, or select dropdowns.",
   "keywords": [
     "jquery",
     "jquery-plugin",
-    "jqueryui"
+    "jqueryui",
+    "jquery",
+    "plugin",
+    "javascript",
+    "library",
+    "dynamic-content",
+    "checkbox",
+    "radio-button",
+    "select-dropdown",
+    "ui",
+    "interactive",
+    "show-hide",
+    "content-management",
+    "user-interface",
+    "frontend",
+    "web-development",
+    "dom-manipulation",
+    "dynamic-display",
+    "toggle",
+    "visibility-control"
   ],
   "main": "index.js",
   "scripts": {
-    "test": "echo \\\"Error: no demo specified\\\" && exit 1",
+    "test": "echo \\\"Error: no demo specified\\\" \u0026\u0026 exit 1",
     "serve": "npx vite",
     "build": "webpack --config webpack.config.js"
   },
-  "author": "HichemTab <konanhichemsinshi@gmail.com>",
+  "author": "HichemTab \u003ckonanhichemsinshi@gmail.com\u003e",
   "repository": {
     "type": "git",
-    "url": "https://github.com/HichemTab-tech/GITHUB_REPO_NAME.git"
+    "url": "https://github.com/HichemTab-tech/ChoozeDisplay-js.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/HichemTab-tech/GITHUB_REPO_NAME/issues"
+    "url": "https://github.com/HichemTab-tech/ChoozeDisplay-js/issues"
   },
-  "homepage": "https://github.com/HichemTab-tech/GITHUB_REPO_NAME#readme",
+  "homepage": "https://github.com/HichemTab-tech/ChoozeDisplay-js#readme",
   "dependencies": {
-    "jquery": "^3.7.0",
-    "npm-jquery-plugin-helpers": "^1.0.0"
+    "jquery": "^3.7.0"
   },
   "devDependencies": {
     "sass": "^1.77.4",

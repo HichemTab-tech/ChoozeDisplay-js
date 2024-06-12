@@ -1,8 +1,8 @@
 import './src/style.css';
-import {LIBRARY_FUNCTION_NAME} from "./src/LIBRARY_MAIN_SCRIPT_NAME";
+import {ChoozeDisplay} from "./src/ChoozeDisplay";
 
 (function ($) {
-    $.fn.LIBRARY_FUNCTION_NAME = LIBRARY_FUNCTION_NAME;
+    $.fn.ChoozeDisplay = ChoozeDisplay;
 })(jQuery);
 
-export { LIBRARY_FUNCTION_NAME };
+export { ChoozeDisplay };

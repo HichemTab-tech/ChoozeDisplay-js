@@ -7,10 +7,10 @@ const webpack = require("webpack");
 // noinspection JSUnresolvedReference
 let bannerPlugin = new webpack.BannerPlugin({
     banner: `/*!
- * GITHUB_REPO_NAME v1.0.0
+ * ChoozeDisplay-js v1.0.0
  * (c) HichemTech
  * Released under the MIT License.
- * Github: github.com/HichemTab-tech/GITHUB_REPO_NAME
+ * Github: github.com/HichemTab-tech/ChoozeDisplay-js
  */
 `,
     raw: true,
@@ -31,8 +31,8 @@ module.exports = [
         entry: './index.js',
         output: {
             path: path.resolve(__dirname, 'dist'),
-            filename: 'LIBRARY_MAIN_SCRIPT_NAME.js',
-            library: 'GITHUB_REPO_NAME',
+            filename: 'ChoozeDisplay.js',
+            library: 'ChoozeDisplay-js',
             libraryTarget: 'umd', // or 'umd2'
             globalObject: 'this',
         },
@@ -49,8 +49,8 @@ module.exports = [
         entry: './index.js',
         output: {
             path: path.resolve(__dirname, 'dist'),
-            filename: 'LIBRARY_MAIN_SCRIPT_NAME.min.js',
-            library: 'GITHUB_REPO_NAME',
+            filename: 'ChoozeDisplay.min.js',
+            library: 'ChoozeDisplay-js',
             libraryTarget: 'umd', // or 'umd2'
             globalObject: 'this',
         },
