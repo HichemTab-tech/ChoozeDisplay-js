@@ -23,7 +23,7 @@ export const LIBRARY_FUNCTION_NAME = function (options = {}, ...args) {
         destroy: function (results, data) {
             //TODO: remove elements created by the plugin
             //...
-            $('[data-LIBRARY_FUNCTION_NAME-id="'+data.idSuffix+'"]').data('LIBRARY_FUNCTION_NAME', null);
+            getElement(data).data('LIBRARY_FUNCTION_NAME', null);
             return results;
         },
     };
@@ -32,13 +32,17 @@ export const LIBRARY_FUNCTION_NAME = function (options = {}, ...args) {
         let data = $(this).data('LIBRARY_FUNCTION_NAME');
         let idSuffix = Math.floor((Math.random() * 1000) + 100);
         if (!data) {
-            let settings = $.extend(
-                {
+            const defaultOptions = {
 
-                },
+            };
+            let settings = $.extend(
+                defaultOptions,
                 options
             );
+
             let $parent = $(this);
+
+            settings = overrideOptionsWithAttrData(settings, $parent);
 
             data = {
                 idSuffix: idSuffix,
@@ -58,6 +62,34 @@ export const LIBRARY_FUNCTION_NAME = function (options = {}, ...args) {
 }
 
 const updateData = (data) => {
-    let $element = $('[data-LIBRARY_FUNCTION_NAME-id="'+data.idSuffix+'"]');
-    $element.data('LIBRARY_FUNCTION_NAME', data);
+    let $clockElement = getElement(data);
+    $clockElement.data('LIBRARY_FUNCTION_NAME', data);
+}
+
+const getElement = (data) => {
+    return $('[data-LIBRARY_FUNCTION_NAME-id="'+data.idSuffix+'"]');
+}
+
+const convertObjectKeys = (defaultOptions) => {
+    return Object.keys(defaultOptions).map(key => {
+        let result = key.replace(/([A-Z])/g, "-$1").toLowerCase();
+        return result.startsWith('-') ? 'data' + result : 'data-' + result;
+    });
+}
+
+const overrideOptionsWithAttrData = (options, $parent) => {
+    // Get the formatted keys for matching with the data-* attributes
+    const formattedKeys = convertObjectKeys(options);
+
+    formattedKeys.forEach((key, index) => {
+        // Retrieve the attribute value from the parent element
+        let attrData = $parent.attr(key);
+        if (attrData) {
+            // If the attribute exists, override the corresponding defaultOption
+            let originalKey = Object.keys(options)[index];
+            options[originalKey] = attrData;
+        }
+    });
+
+    return options;
 }
